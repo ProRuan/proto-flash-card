@@ -1,0 +1,45 @@
+@use 'background-colors' as bgc;
+@use 'mixins';
+
+.header {
+  padding: 8px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @include mixins.display($justify: space-between);
+}
+
+.home-button {
+  background-color: bgc.$lightgray;
+  border: none;
+  padding: 16px 32px;
+  line-height: 1;
+
+  @include mixins.border($radius: 32px);
+  @include mixins.font($size: 16px, $weight: 700);
+}
+
+.button-group {
+  gap: 16px;
+
+  @include mixins.display($justify: flex-end);
+}
+
+.primary-button {
+  background-color: bgc.$lightblue;
+  border: none;
+  padding: 8px 16px;
+  line-height: 1;
+
+  @include mixins.border($radius: 16px);
+  @include mixins.font($size: 16px, $weight: 700);
+}
+
+.secondary-button {
+  background-color: bgc.$lightcoral;
+  border: none;
+  padding: 8px 16px;
+  line-height: 1;
+
+  @include mixins.border($radius: 16px);
+  @include mixins.font($size: 16px, $weight: 700);
+}

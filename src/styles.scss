@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  height: 100vh;
+  height: 100dvh;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  min-height: calc(100vh - 128px);
+  min-height: calc(100dvh - 128px);
+}
+
+p {
+  margin: 0;
+}

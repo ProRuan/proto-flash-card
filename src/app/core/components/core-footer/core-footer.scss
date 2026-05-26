@@ -1,0 +1,20 @@
+@use 'mixins';
+
+.footer {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  min-height: 64px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+
+  @include mixins.display();
+}
+
+.link-group {
+  gap: 16px;
+
+  @include mixins.display();
+}
+
+.link {
+  @include mixins.font(16px, 400, '#000000');
+}

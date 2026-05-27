@@ -1,0 +1,8 @@
+<h2>{{ sampleDeck.name }}</h2>
+
+@for (item of sampleDeck.cards; track $index) {
+<div class="sample-card">
+    <p>{{ item.question }}</p>
+    <p>{{ item.answer }}</p>
+</div>
+}

@@ -1,0 +1,18 @@
+@use './mixins';
+
+.deck-creator-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @include mixins.display($justify: start);
+  gap: 16px;
+}
+
+.labelled-input {
+  gap: 8px;
+
+  @include mixins.display($justify: start);
+}

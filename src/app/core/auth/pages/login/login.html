@@ -3,12 +3,14 @@
 <main class="login">
     <h2 class="title">Log in</h2>
 
-    <form class="form">
+    <form [formGroup]="form" class="form" (ngSubmit)="onSubmit()">
         <label for="email" class="label">Email</label>
-        <input type="email" id="email" name="email" class="input" />
+        <input value="from.getValue('email')" type="email" id="email" name="email" class="input" autocomplete="email"
+            inputmode="email" formControlName="email" />
 
         <label for="password" class="label">Password</label>
-        <input type="password" id="password" name="password" class="input" />
+        <input value="form.getValue('password')" type="password" id="password" name="password" class="input"
+            autocomplete="current-password" formControlName="password" />
 
         <button type="submit" class="button">Log in</button>
     </form>

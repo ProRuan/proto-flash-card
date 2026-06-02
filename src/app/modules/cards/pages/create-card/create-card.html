@@ -1,0 +1,32 @@
+<app-core-header></app-core-header>
+
+<main class="create-card">
+    <h2 class="title">Create Card</h2>
+
+    <form [formGroup]="form" class="form" (ngSubmit)="onSubmit()">
+        <label for="front" class="label">Front</label>
+        <input id="front" formControlName="front" class="input" placeholder="Enter card front">
+
+        <label for="back" class="label">Back</label>
+        <input id="back" formControlName="back" class="input" placeholder="Enter card back">
+
+        <label for="topic" class="label">Topic</label>
+        <input id="topic" formControlName="topic" type="text" class="input" placeholder="Enter card topic">
+
+        <label for="tags" class="label">Tags</label>
+        <input id="tags" formControlName="tags" type="text" class="input"
+            placeholder="Enter card tags (comma separated)">
+
+        <label for="relationType" class="label">Relation Type</label>
+        <input id="relationType" formControlName="relationType" type="text" class="input"
+            placeholder="Enter relation type (e.g., 'is a', 'part of')">
+
+        <label for="relatedCardId" class="label">Related Card ID</label>
+        <input id="relatedCardId" formControlName="relatedCardId" type="text" class="input"
+            placeholder="Enter related card ID">
+
+        <button type="submit" class="button" [disabled]="form.invalid">Create Card</button>
+    </form>
+</main>
+
+<app-core-footer></app-core-footer>

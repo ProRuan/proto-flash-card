@@ -11,4 +11,12 @@ export const routes: Routes = [
   { path: 'reset-password', component: ResetPassword },
   { path: 'create-deck', component: CreateDeck },
   { path: 'create-card', component: CreateCard },
+  {
+    path: 'card-viewer',
+    loadComponent: () => import('@modules/cards/pages').then((m) => m.CardViewer),
+  },
+  {
+    path: 'card-editor',
+    loadComponent: () => import('@modules/cards/pages').then((m) => m.CreateCard),
+  },
 ];

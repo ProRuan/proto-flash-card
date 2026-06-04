@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { CoreFooter, CoreHeader } from '@core/components';
 import { BasicCardData } from '@data/basic-card-data';
@@ -11,18 +12,26 @@ import { BasicCard } from '@modules/cards/interfaces';
   styleUrl: './card-viewer.scss',
 })
 export class CardViewer {
-  sampleData = inject(BasicCardData);
+  private route = inject(ActivatedRoute);
+  private sampleData = inject(BasicCardData);
 
   cards: BasicCard[] = this.sampleData.basicCards;
 
   basicCard: BasicCard = this.cards[1];
 
-  // basicCard: BasicCard = {
-  //   front: 'What is the capital of France?',
-  //   back: 'Paris',
-  //   topic: 'Geography',
-  //   tags: ['capital', 'country', 'Europe'],
-  //   relationType: 'none',
-  //   relatedCardIDs: [],
-  // };
+  ngOnInit() {
+    console.log('ngOnInit called in CardViewer');
+    this.route.params.subscribe((params) => {
+      const cardId = params['cardId'];
+      console.log('cardId from route params:', cardId);
+      if (cardId) {
+        const foundCard = this.cards[cardId];
+        if (foundCard) {
+          this.basicCard = foundCard;
+        } else {
+          this.basicCard = this.cards[1];
+        }
+      }
+    });
+  }
 }

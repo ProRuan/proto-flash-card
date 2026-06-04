@@ -24,4 +24,8 @@ export class BasicCardData {
       relatedCardIDs: [],
     },
   ];
+
+  addCard(card: BasicCard) {
+    this.basicCards.push(card);
+  }
 }

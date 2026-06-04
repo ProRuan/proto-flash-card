@@ -12,11 +12,11 @@ export const routes: Routes = [
   { path: 'create-deck', component: CreateDeck },
   { path: 'create-card', component: CreateCard },
   {
-    path: 'card-viewer',
+    path: 'card-viewer/:cardId',
     loadComponent: () => import('@modules/cards/pages').then((m) => m.CardViewer),
   },
   {
-    path: 'card-editor',
+    path: 'card-editor/:cardId',
     loadComponent: () => import('@modules/cards/pages').then((m) => m.CreateCard),
   },
 ];

@@ -1,0 +1,23 @@
+<app-core-header></app-core-header>
+
+<main class="deck-lists">
+    <h1>Deck Lists</h1>
+    <p>Here you can find all your decks. Click on a deck to view its details and edit its cards.</p>
+    <ul>
+        @for(deck of decks; track deck.name) {
+        <li>
+            <h2>{{ deck.name }}</h2>
+            <p>{{ deck.category }}</p>
+            <a>View Deck</a>
+            @for(card of deck.cards; track card.front) {
+            <div class="card-preview">
+                <p><strong>Front:</strong> {{ card.front }}</p>
+                <p><strong>Back:</strong> {{ card.back }}</p>
+            </div>
+            }
+        </li>
+        }
+    </ul>
+</main>
+
+<app-core-footer></app-core-footer>

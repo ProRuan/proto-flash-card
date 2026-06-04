@@ -1,0 +1,17 @@
+@use './mixins';
+
+.deck-lists {
+  @include mixins.display();
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card-preview {
+  @include mixins.display();
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

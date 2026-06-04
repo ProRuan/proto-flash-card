@@ -10,6 +10,10 @@ export const routes: Routes = [
   { path: 'forgot-password', component: ForgotPassword },
   { path: 'reset-password', component: ResetPassword },
   { path: 'create-deck', component: CreateDeck },
+  {
+    path: 'deck-lists',
+    loadComponent: () => import('@modules/decks/pages').then((m) => m.DeckLists),
+  },
   { path: 'create-card', component: CreateCard },
   {
     path: 'card-viewer/:cardId',

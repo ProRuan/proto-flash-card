@@ -1,0 +1,45 @@
+.card-level-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-item {
+  width: 200px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-level-indicator {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  //   top: 10px;
+  //   right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.card-level-1 {
+  background-color: #ff4d4d; /* Red for level 1 */
+}
+
+.card-level-2 {
+  background-color: #ffcc00; /* Yellow for level 2 */
+}
+
+.card-level-3 {
+  background-color: #4dff4d; /* Green for level 3 */
+}

@@ -1,0 +1,20 @@
+<app-core-header></app-core-header>
+
+<main class="card-level-viewer">
+    <h1>Card Level Viewer</h1>
+    <div class="card-list">
+        @for (card of cards; track card.front) {
+        <div class="card-item">
+            <div class="card-level-indicator" [style.backgroundColor]="getCardLevelColor(card.studyLevel)"></div>
+            <h2>{{ card.front }}</h2>
+            <p>{{ card.back }}</p>
+            <p>Study Level: {{ card.studyLevel }}</p>
+            <p>Topic: {{ card.topic }}</p>
+            <p>Tags: {{ card.tags.join(', ') }}</p>
+            <p>Related Cards: {{ card.relatedCardIDs.join(', ') }}</p>
+        </div>
+        }
+    </div>
+</main>
+
+<app-core-footer></app-core-footer>

@@ -23,4 +23,8 @@ export const routes: Routes = [
     path: 'card-editor/:cardId',
     loadComponent: () => import('@modules/cards/pages').then((m) => m.CreateCard),
   },
+  {
+    path: 'card-level-viewer',
+    loadComponent: () => import('@modules/cards/pages').then((m) => m.CardLevelViewer),
+  },
 ];
